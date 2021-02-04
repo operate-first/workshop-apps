@@ -1,0 +1,20 @@
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: test
+spec:
+  project: default
+  source:
+    path: test
+    repoURL: test
+    targetRevision: master
+  destination:
+    namespace: fail-ws-ml-prague
+    server: "https://kubernetes.default.svc"
+  syncPolicy:
+    automated:
+      selfHeal: true
+      prune: true
+    syncOptions:
+      - Validate=false
