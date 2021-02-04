@@ -1,0 +1,20 @@
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: <NAME>
+spec:
+  project: workshops
+  source:
+    path: <PATH_WITHIN_REPO>
+    repoURL: <YOUR_REPO_URL>
+    targetRevision: master
+  destination:
+    namespace: ws-ml-prague
+    server: "https://kubernetes.default.svc"
+  syncPolicy:
+    automated:
+      selfHeal: true
+      prune: true
+    syncOptions:
+      - Validate=false

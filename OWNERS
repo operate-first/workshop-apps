@@ -1,0 +1,18 @@
+# See the OWNERS docs at https://go.k8s.io/owners
+
+approvers:
+  - tumido
+  - vpavlin
+  - pacospace
+  - martinpovolny
+
+reviewers:
+  - 4n4nd
+  - anishasthana
+  - harshad16
+  - hemajv
+  - HumairAK
+  - tumido
+  - martinpovolny
+  - vpavlin
+  - pacospace
