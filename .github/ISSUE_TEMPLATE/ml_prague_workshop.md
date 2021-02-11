@@ -1,5 +1,5 @@
 ---
-name: Workshop issue
+name: Workshop issue ML Prague
 about: Task issue during workshop
 title: Workshop issue ML Prague
 assignees: vpavlin pacospace tumido
