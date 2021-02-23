@@ -17,3 +17,6 @@ If applicable, add screenshots to help explain your problem.
 
 **Additional context**
 Add any other context about the problem here.
+
+**Maintainers (do not modify this list)**
+@vpavlin @pacospace @tumido
