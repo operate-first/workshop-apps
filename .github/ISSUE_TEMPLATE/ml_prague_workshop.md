@@ -2,7 +2,7 @@
 name: Workshop issue ML Prague
 about: Task issue during workshop
 title: Workshop issue ML Prague
-assignees: vpavlin pacospace tumido
+assignees: vpavlin, pacospace, tumido
 labels: ws-ml-prague-issue
 ---
 
@@ -17,6 +17,3 @@ If applicable, add screenshots to help explain your problem.
 
 **Additional context**
 Add any other context about the problem here.
-
-**Maintainers (do not modify this list)**
-@vpavlin @pacospace @tumido
