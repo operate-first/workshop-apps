@@ -30,4 +30,4 @@ repos:
       - id: yamllint
         files: \.(yaml|yml)$
         types: [file, yaml]
-        entry: yamllint --strict
+        entry: 'yamllint --strict -d "{ignore: kustomization.yaml}"'
