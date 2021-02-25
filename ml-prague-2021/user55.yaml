@@ -8,7 +8,7 @@ spec:
   source:
     path: manifests
     repoURL: https://github.com/tumido/ws-test.git
-    targetRevision: master
+    targetRevision: HEAD
   destination:
     namespace: workshop-user55
     name: ml-prague-workshop
