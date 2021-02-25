@@ -8,7 +8,7 @@ spec:
   source:
     path: <PATH_WITHIN_REPO>
     repoURL: <YOUR_REPO_URL>
-    targetRevision: master
+    targetRevision: HEAD
   destination:
     namespace: workshop-<USERNAME>
     name: ml-prague-workshop

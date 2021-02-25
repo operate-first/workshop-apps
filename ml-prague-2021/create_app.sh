@@ -21,7 +21,7 @@ spec:
   source:
     path: manifests
     repoURL: $2
-    targetRevision: master
+    targetRevision: HEAD
   destination:
     namespace: workshop-$1
     name: ml-prague-workshop
