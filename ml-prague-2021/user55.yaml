@@ -1,0 +1,20 @@
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: user55
+spec:
+  project: workshops
+  source:
+    path: manifests
+    repoURL: https://github.com/tumido/ws-test.git
+    targetRevision: master
+  destination:
+    namespace: workshop-user55
+    name: ml-prague-workshop
+  syncPolicy:
+    automated:
+      selfHeal: true
+      prune: true
+    syncOptions:
+      - Validate=false
