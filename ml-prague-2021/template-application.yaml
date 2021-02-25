@@ -2,7 +2,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: <NAME>
+  name: <USERNAME>
 spec:
   project: workshops
   source:
@@ -10,8 +10,8 @@ spec:
     repoURL: <YOUR_REPO_URL>
     targetRevision: master
   destination:
-    namespace: ws-ml-prague
-    server: "https://kubernetes.default.svc"
+    namespace: workshop-<USERNAME>
+    name: ml-prague-workshop
   syncPolicy:
     automated:
       selfHeal: true
