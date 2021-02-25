@@ -12,11 +12,6 @@ jobs:
     steps:
       - uses: actions/checkout@master
 
-      - id: files
-        uses: jitterbit/get-changed-files@v1
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-
       - uses: instrumenta/conftest-action@master
         with:
-          files: ${{ steps.files.outputs.all }}
+          files: "**/*.yaml"
