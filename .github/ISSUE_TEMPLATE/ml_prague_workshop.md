@@ -2,7 +2,7 @@
 name: Workshop issue ML Prague
 about: Task issue during workshop
 title: Workshop issue ML Prague
-assignees: vpavlin pacospace tumido
+assignees: vpavlin, pacospace, tumido
 labels: ws-ml-prague-issue
 ---
 
