@@ -1,0 +1,20 @@
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: user28
+spec:
+  project: workshops
+  source:
+    path: manifests/overlays/test
+    repoURL: https://github.com/rrma/elyra-aidevsecops-tutorial.git
+    targetRevision: HEAD
+  destination:
+    namespace: workshop-user28
+    name: ml-prague-workshop
+  syncPolicy:
+    automated:
+      selfHeal: true
+      prune: true
+    syncOptions:
+      - Validate=false
