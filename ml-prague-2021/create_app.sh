@@ -19,7 +19,7 @@ metadata:
 spec:
   project: workshops
   source:
-    path: manifests
+    path: manifests/overlays/test
     repoURL: $2
     targetRevision: HEAD
   destination:

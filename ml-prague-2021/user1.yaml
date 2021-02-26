@@ -6,7 +6,7 @@ metadata:
 spec:
   project: workshops
   source:
-    path: manifests
+    path: manifests/overlays/test
     repoURL: https://github.com/thoth-station/elyra-aidevsecops-tutorial.git
     targetRevision: HEAD
   destination:
