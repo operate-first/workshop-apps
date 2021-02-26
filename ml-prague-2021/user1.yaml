@@ -7,7 +7,7 @@ spec:
   project: workshops
   source:
     path: manifests
-    repoURL: https://github.com/user1/REPO.git
+    repoURL: https://github.com/thoth-station/elyra-aidevsecops-tutorial.git
     targetRevision: HEAD
   destination:
     namespace: workshop-user1
