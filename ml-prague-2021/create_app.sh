@@ -33,6 +33,11 @@ spec:
       - Validate=false
 EOF
 
-kustomize edit add resource $1.yaml
+if ! [ -x "$(command -v kustomize)" ]; then
+    grep -q "resources:" kustomization.yaml  || echo "resources:" >> kustomization.yaml
+    grep -q "\- $1.yaml" kustomization.yaml  || echo "- $1.yaml" >> kustomization.yaml
+else
+    kustomize edit add resource $1.yaml
+fi
 
 popd
