@@ -1,0 +1,20 @@
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: user7
+spec:
+  project: workshops
+  source:
+    path: manifests/overlays/test
+    repoURL: https://github.com/pstovik/workshop-apps.git
+    targetRevision: HEAD
+  destination:
+    namespace: workshop-user7
+    name: ml-prague-workshop
+  syncPolicy:
+    automated:
+      selfHeal: true
+      prune: true
+    syncOptions:
+      - Validate=false
