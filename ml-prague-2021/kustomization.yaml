@@ -3,3 +3,4 @@ kind: Kustomization
 resources:
 - user1.yaml
 - user17.yaml
+- user28.yaml
