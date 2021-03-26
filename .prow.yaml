@@ -13,20 +13,20 @@ presubmits:
           resources:
             requests:
               memory: "256Mi"
-  - name: conftest
-    decorate: true
-    max_concurrency: 1
-    run_if_changed: ".*yaml"
-    skip_report: false
-    context: aicoe-ci/prow/conftest
-    spec:
-      containers:
-        - image: quay.io/operate-first/opf-toolbox:v0.3.2
-          command:
-            - "test-conftest"
-          resources:
-            requests:
-              memory: "256Mi"
+  # - name: conftest
+  #   decorate: true
+  #   max_concurrency: 1
+  #   run_if_changed: ".*yaml"
+  #   skip_report: false
+  #   context: aicoe-ci/prow/conftest
+  #   spec:
+  #     containers:
+  #       - image: quay.io/operate-first/opf-toolbox:v0.3.2
+  #         command:
+  #           - "test-conftest"
+  #         resources:
+  #           requests:
+  #             memory: "256Mi"
   - name: pre-commit
     decorate: true
     skip_report: false
