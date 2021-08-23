@@ -2,12 +2,13 @@
 exclude: .github/workflows
 repos:
   - repo: git://github.com/Lucas-C/pre-commit-hooks
-    rev: v1.1.1
+    rev: v1.1.10
     hooks:
       - id: remove-tabs
+        exclude: \.rego$
 
   - repo: git://github.com/pre-commit/pre-commit-hooks
-    rev: v2.0.0
+    rev: v4.0.1
     hooks:
       - id: trailing-whitespace
       - id: check-merge-conflict
@@ -19,15 +20,28 @@ repos:
       - id: detect-private-key
 
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v2.3.0
+    rev: v4.0.1
     hooks:
       - id: end-of-file-fixer
       - id: trailing-whitespace
 
   - repo: https://github.com/adrienverge/yamllint.git
-    rev: v1.23.0
+    rev: v1.26.2
     hooks:
       - id: yamllint
-        files: \.(yaml|yml)$
+        files: \.ya?ml$
         types: [file, yaml]
         entry: 'yamllint --strict -d "{ignore: kustomization.yaml}"'
+
+  - repo: https://github.com/anderseknert/pre-commit-opa
+    rev: v1.4.1
+    hooks:
+      - id: opa-fmt
+      - id: conftest-test
+        files: \.ya?ml$
+        exclude: ^\..*
+        types: [file, yaml]
+      - id: conftest-verify
+        files: \.ya?ml$
+        exclude: ^\..*
+        types: [file, yaml]
