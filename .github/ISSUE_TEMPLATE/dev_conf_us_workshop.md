@@ -1,9 +1,9 @@
 ---
-name: Workshop issue ML Prague
+name: Workshop issue DevConf US 2021
 about: Task issue during workshop
-title: Workshop issue ML Prague
+title: Workshop issue DevConf US 2021
 assignees: vpavlin, pacospace, tumido
-labels: ws-ml-prague-issue
+labels: ws-dev-conf-us-issue
 ---
 
 **Task**
