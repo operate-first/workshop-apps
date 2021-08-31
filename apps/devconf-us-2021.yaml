@@ -16,7 +16,7 @@ spec:
                 path: manifests/overlays/test
                 repoURL: "https://github.com/{{user}}/elyra-aidevsecops-tutorial.git"
             destination:
-                name: zero
+                name: devconfus2021
                 namespace: "devconf-us-2021-{{user}}"
             syncPolicy:
                 automated:
