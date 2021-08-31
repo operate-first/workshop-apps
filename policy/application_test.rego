@@ -10,15 +10,15 @@ no_violations {
 
 test_allow {
 	input := {
-		"kind": "ApplicationSet",
+		"kind": "Application",
 		"metadata": {"name": "a"},
-		"spec": {"template": {"spec": {
+		"spec": {
 			"project": "workshops",
 			"destination": {
 				"namespace": "a-x",
 				"name": "b",
 			},
-		}}},
+		},
 	}
 
 	no_violations with input as input
@@ -26,15 +26,15 @@ test_allow {
 
 test_deny_wrong_project {
 	input := {
-		"kind": "ApplicationSet",
+		"kind": "Application",
 		"metadata": {"name": "a"},
-		"spec": {"template": {"spec": {
+		"spec": {
 			"project": "default",
 			"destination": {
 				"namespace": "a-x",
 				"name": "b",
 			},
-		}}},
+		},
 	}
 
 	deny["Application must use the 'workshops' project"] with input as input
@@ -42,49 +42,33 @@ test_deny_wrong_project {
 
 test_deny_destination_server {
 	input := {
-		"kind": "ApplicationSet",
+		"kind": "Application",
 		"metadata": {"name": "a"},
-		"spec": {"template": {"spec": {
+		"spec": {
 			"project": "default",
 			"destination": {
 				"namespace": "a-x",
 				"server": "b",
 			},
-		}}},
+		},
 	}
 
 	deny["Application must be deployed to the cluster via destination.name"] with input as input
 	deny["Application must be deployed to the cluster"] with input as input
 }
 
-test_deny_modified_namespace {
-	input := {
-		"kind": "ApplicationSet",
-		"metadata": {"name": "a"},
-		"spec": {"template": {"spec": {
-			"project": "default",
-			"destination": {
-				"namespace": "x",
-				"name": "b",
-			},
-		}}},
-	}
-
-	deny["Application resources must target the a-* namespaces only"] with input as input
-}
-
 test_deny_wrong_kind {
 	input := {
 		"kind": "SomethingElse",
 		"metadata": {"name": "a"},
-		"spec": {"template": {"spec": {
+		"spec": {
 			"project": "workshops",
 			"destination": {
 				"namespace": "a-x",
 				"name": "b",
 			},
-		}}},
+		},
 	}
 
-	deny["This repo allows ApplicationSets only"] with input as input
+	deny["This repo allows Application only"] with input as input
 }
