@@ -8,6 +8,7 @@ spec:
               elements:
                   - user: tumido
                   - user: pacospace
+                  - user: chauhankaranraj
     template:
         metadata:
             name: "elyra-aidevsecops-tutorial-{{user}}"
