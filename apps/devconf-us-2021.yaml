@@ -6,7 +6,7 @@ spec:
     generators:
         - list:
               elements:
-                  - user: tumido
+                  - user: pacospace
     template:
         metadata:
             name: "elyra-aidevsecops-tutorial-{{user}}"
