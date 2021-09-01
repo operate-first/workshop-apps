@@ -8,6 +8,8 @@ spec:
     path: manifests/overlays/test
     repoURL: "https://github.com/pacospace/elyra-aidevsecops-tutorial.git"
     targetRevision: HEAD
+    kustomize:
+      namePrefix: pacospace-
   destination:
     namespace: elyra-aidevsecops-tutorial
     name: devconfus2021
