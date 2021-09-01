@@ -8,6 +8,8 @@ spec:
     path: manifests/overlays/test
     repoURL: "https://github.com/tumido/elyra-aidevsecops-tutorial.git"
     targetRevision: HEAD
+    kustomize:
+      namePrefix: tumido-
   destination:
     namespace: elyra-aidevsecops-tutorial
     name: devconfus2021
