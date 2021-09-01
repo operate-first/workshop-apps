@@ -12,6 +12,8 @@ spec:
     path: manifests/overlays/test
     repoURL: "https://github.com/$1/elyra-aidevsecops-tutorial.git"
     targetRevision: HEAD
+    kustomize:
+      namePrefix: $1-
   destination:
     namespace: elyra-aidevsecops-tutorial
     name: devconfus2021
