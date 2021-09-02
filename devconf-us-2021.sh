@@ -6,6 +6,8 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: devconf-us-2021-$1
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
 spec:
   project: workshops
   source:
