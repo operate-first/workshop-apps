@@ -1,9 +1,9 @@
 ---
-name: Workshop issue DevConf US 2021
+name: Workshop issue DevConf CZ 2022
 about: Task issue during workshop
-title: Workshop issue DevConf US 2021
+title: Workshop issue DevConf CZ 2022
 assignees: vpavlin, pacospace, tumido
-labels: ws-dev-conf-us-issue
+labels: ws-dev-conf-cz-issue
 ---
 
 **Task**
